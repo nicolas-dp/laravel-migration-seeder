@@ -47,11 +47,14 @@
             <div class="row row-cols-md-4">
                 @forelse($holidays as $holiday)
                 <div class="col">
-                    <img class="img-fluid" src="{{$holiday->image}}" alt="...">
+                    <img src="{{$holiday->image}}" alt="..." style="object-fit: cover; height: 145px; width: 210px;">
                     <div class="card-body text-white d-flex flex-wrap">
                         <h5 class="text-capitalize">{{$holiday->name}}</h5>
                         <small>{{$holiday->description}}</small>
-                        <span class="badge bg-danger">{{$holiday->price}}</span>
+                        <span>
+                            Prezzo:
+                            <badge class="badge bg-danger"> {{$holiday->price}} €</badge>
+                        </span>
                     </div>
                 </div>
                 @empty
