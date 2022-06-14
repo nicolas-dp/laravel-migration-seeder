@@ -19,7 +19,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#"><img height="70" src="https://www.meteoweb.eu/wp-content/uploads/2019/06/solstizio-estate-2019-1.gif" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -42,7 +42,8 @@
     <main class="bg-dark pt-5">
         <div class="container">
             <div class="text-center">
-                <img src="https://www.meteoweb.eu/wp-content/uploads/2019/06/solstizio-estate-2019-1.gif" alt="">
+                <h2 class="text-danger">Offerte Summer 2022!</h2>
+                
             </div>
             <div class="row row-cols-md-4">
                 @forelse($holidays as $holiday)
