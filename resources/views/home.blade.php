@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
     <!--  CSS  -->
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-
+    <!-- Wait the page is fully loaded to load our script using 'defer' -->
+    <script src="{{asset('js/app.js')}}" defer></script>
 </head>
 
 <body>
