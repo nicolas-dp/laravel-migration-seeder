@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Holiday;
 use Illuminate\Http\Request;
 
-class HouseController extends Controller
+class HolidayController extends Controller
 {
     public function index()
     {
-        $packs = config('db.holiday');
+        $holidays = Holiday::all();
 
 
-        return view('holiday', compact('packs'));
+        return view('holiday', compact('holidays'));
     }
     
 }

@@ -1,9 +1,5 @@
 <?php
-
-use App\Models;
-
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,4 +11,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HolidayController@index')->name('home');
+Route::get('/', 'HolidayController@index')->name('holiday');

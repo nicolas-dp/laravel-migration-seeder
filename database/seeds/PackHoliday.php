@@ -16,7 +16,7 @@ class PackHoliday extends Seeder
     public function run()
     {
         $packs = [
-            'holidays' =>
+        
             [
                 'name' => 'maiorca',
                 'description' => 'Volo + soggiorno da 7 a 10 notti',
