@@ -17,9 +17,8 @@ class CreateHolidayTable extends Migration
             $table->id('id');
             $table->string('name');
             $table->string('description');
-            $table->int('price');
+            $table->string('price');
             $table->string('image');
-            $table->timestamps();
         });
     }
 

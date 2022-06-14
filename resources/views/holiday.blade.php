@@ -11,44 +11,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
     <!--  CSS  -->
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <!-- Wait the page is fully loaded to load our script using 'defer' -->
-    <script src="{{asset('js/app.js')}}" defer></script>
+
 </head>
 
 <body>
     <!-- NAVBAR -->
     <header>
-        <div class="container">
-            <nav class="nav">
-                <a href="#">Home</a>
-                <a href="#">Links</a>
-            </nav>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
     </header>
 
 
-    <main>
-    <div class="container">
-        <div class="row row-cols-md-3">
-            @forelse($holidays as $holiday)
-            <div class="col">
-                <img src="{{$holiday->image}}" alt="...">
-                <div class="card-body">
-                    <h5>{{$holiday->name}}</h5>
-                    <small>{{$holiday->description}}</small>
-                    <span class="badge badge-danger">{{$holiday->price}}</span>
-                </div>
+    <main class="bg-dark pt-5">
+        <div class="container">
+            <div class="text-center">
+                <img src="https://www.meteoweb.eu/wp-content/uploads/2019/06/solstizio-estate-2019-1.gif" alt="">
             </div>
-            @empty
-            <p>Not card pack yet!</p>
+            <div class="row row-cols-md-4">
+                @forelse($holidays as $holiday)
+                <div class="col">
+                    <img class="img-fluid" src="{{$holiday->image}}" alt="...">
+                    <div class="card-body text-white d-flex flex-wrap">
+                        <h5 class="text-capitalize">{{$holiday->name}}</h5>
+                        <small>{{$holiday->description}}</small>
+                        <span class="badge bg-danger">{{$holiday->price}}</span>
+                    </div>
+                </div>
+                @empty
+                <p>Not card pack yet!</p>
 
-            @endforelse
+                @endforelse
+            </div>
         </div>
-    </div>
     </main>
 
 
     </div>
+    <script src="{{asset('js/app.js')}}"></script>
 </body>
 
 </html>
